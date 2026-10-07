@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>About Us — RigenFarms | Climate-Smart Agriculture in Kenya</title>
+  <meta name="description" content="Discover RigenFarms' journey from Kisumu, Kenya: empowering youth, schools, and farmers with climate-smart wicking container gardening and sustainable food security." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Inter:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="rigen-theme.css" />
+
+  <style>
+    .page-hero::before {
+      background-image: url('images/ngo.jpg');
+    }
+
+    /* About Story Bento */
+    .story-hero-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--rad);
+      margin-top: 24px;
+    }
+
+    /* Timeline Section */
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 48px auto 0;
+      padding-left: 36px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 11px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--g4), var(--g6), var(--s2));
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .tl-dot {
+      position: absolute;
+      left: -36px;
+      top: 4px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--w);
+      border: 3px solid var(--g4);
+      box-shadow: 0 0 0 4px var(--g8);
+    }
+    .tl-year {
+      font-family: var(--ff-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--a2);
+      margin-bottom: 6px;
+    }
+    .tl-title {
+      font-family: var(--ff-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .tl-desc {
+      color: var(--sub);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    /* Team Grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .team-card {
+      background: var(--w);
+      border: 1px solid var(--li);
+      border-radius: var(--rad-lg);
+      overflow: hidden;
+      box-shadow: var(--sh-sm);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sh);
+    }
+    .team-photo-wrap {
+      width: 100%;
+      height: 290px;
+      overflow: hidden;
+      background: var(--s1);
+    }
+    .team-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .team-card:hover .team-photo-wrap img {
+      transform: scale(1.05);
+    }
+    .team-info {
+      padding: 24px 22px;
+    }
+    .team-name {
+      font-family: var(--ff-display);
+      font-size: 1.28rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .team-role {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--a2);
+      margin-bottom: 14px;
+    }
+    .team-quote {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--sub);
+      line-height: 1.6;
+      border-left: 2px solid var(--g7);
+      padding-left: 12px;
+      margin-bottom: 16px;
+    }
+    .team-loc {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--sub);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Partners Banner */
+    .partner-logos-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 36px 54px;
+      margin-top: 40px;
+    }
+    .partner-logos-row img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(1) opacity(0.65);
+      transition: filter var(--tr), transform var(--tr);
+    }
+    .partner-logos-row img:hover {
+      filter: none;
+      transform: scale(1.06);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header id="header">
+    <a class="nav-logo" href="index.html" aria-label="RigenFarms — Home">
+      <img src="images/logo.png" alt="RigenFarms Logo" width="40" height="40" />
+      <div class="logo-text">
+        <span class="logo-name">RigenFarms</span>
+        <span class="logo-sub">Kisumu · Kenya</span>
+      </div>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li class="has-drop">
+          <a href="aboutus.html" class="active">About</a>
+          <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Toggle About submenu">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="drop-menu">
+            <a href="aboutus.html">Our Story & Mission</a>
+            <a href="aboutus.html#team">Leadership & Team</a>
+            <a href="aboutus.html#values">Core Principles</a>
+            <a href="impact.html">Impact Metrics</a>
+          </div>
+        </li>
+        <li class="has-drop">
+          <a href="projects.html">Programs</a>
+          <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Programs submenu">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="drop-menu">
+            <a href="projects.html">All Field Programs</a>
+            <a href="projects.html#wicking">Wicking Beds</a>
+            <a href="projects.html#schools">School Gardens</a>
+            <a href="memoranda.html">Guides & MoUs</a>
+          </div>
+        </li>
+        <li><a href="photos.html">Gallery</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="volunteers.html">Get Involved</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="nav-cta" href="donation.html">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i> Donate
+      </a>
+      <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <nav class="mob-menu" id="mobMenu" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html" class="active">About Us</a>
+    <a href="projects.html">Programs</a>
+    <a href="impact.html">Impact</a>
+    <a href="photos.html">Field Gallery</a>
+    <a href="volunteers.html">Volunteer</a>
+    <a href="annual-reports.html">Reports</a>
+    <a href="contactus.html">Contact</a>
+    <div style="margin-top: 28px;">
+      <a class="btn btn-primary" href="donation.html" style="width: 100%;">
+        <i class="fa-solid fa-leaf"></i> Donate Now
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero" aria-labelledby="aboutH1">
+    <div class="wrap">
+      <div class="page-hero-inner rv">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>About Us</span>
+        </div>
+        <div class="sec-tag">Origin & Purpose</div>
+        <h1 id="aboutH1">Cultivating climate resilience from the <em>ground up</em>.</h1>
+        <p>Founded in Kisumu in 2022, RigenFarms transforms semi-arid and vulnerable school compounds into self-sustaining food havens using climate-smart wicking garden containers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Origin & Mission Bento Grid -->
+  <section class="section" id="story">
+    <div class="wrap">
+      <div class="bento-grid">
+        <div class="bento-card rv" style="grid-column: span 7;">
+          <div class="sec-tag">Our Story</div>
+          <h2 class="card-title" style="font-size: 1.85rem;">From one school garden to a regional movement.</h2>
+          <p class="card-desc">In 2022, western Kenya experienced unpredictable drought cycles that devastated local harvests and disrupted school lunch programs. Observing how students struggled to focus on empty stomachs, our founders set out to design a food production model that didn't rely on expensive irrigation systems or huge acreage.</p>
+          <p class="card-desc" style="margin-top: 14px;">We developed accessible wicking container systems from recycled materials and locally sourced volcanic aggregates. These self-watering beds consume up to 50% less water while generating bumper yields of nutrient-dense indigenous greens and vegetables right on school grounds.</p>
+          <img class="story-hero-img" src="images/gowowo.jpeg" alt="School children tending leafy greens in Kisumu" loading="lazy" />
+        </div>
+
+        <div class="bento-card dark rv rv-delay-1" style="grid-column: span 5; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="card-icon"><i class="fa-solid fa-compass"></i></div>
+            <h3 class="card-title" style="color: var(--w); font-size: 1.7rem;">Vision & Mission</h3>
+            <p class="card-desc" style="margin-top: 16px;"><strong>Vision:</strong> A Kenya where every school and community has autonomous food security, sustainable water stewardship, and climate resilience driven by young growers.</p>
+            <p class="card-desc" style="margin-top: 16px;"><strong>Mission:</strong> To equip Kenyan schools, youth agripreneurs, and smallholder farmers with practical wicking-bed technology, regenerative soil training, and continuous field mentorship.</p>
+          </div>
+          <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12);">
+            <div style="font-family: var(--ff-display); font-size: 2.2rem; font-weight: 800; color: var(--g6);" data-count="2000">0</div>
+            <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.6);">Smallholders & youth trained since 2022</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values 3x2 Grid -->
+  <section class="section section-tint" id="values">
+    <div class="wrap">
+      <div class="text-center rv">
+        <div class="sec-tag">Our North Star</div>
+        <h2 class="sec-h2">The principles that guide our work</h2>
+        <p class="sec-lead">Every seed planted, wicking container engineered, and workshop hosted is grounded in six uncompromising commitments.</p>
+      </div>
+
+      <div class="bento-grid" style="margin-top: 48px;">
+        <div class="bento-card rv" style="grid-column: span 4;">
+          <div class="card-icon"><i class="fa-solid fa-droplet"></i></div>
+          <h3 class="card-title">Water Stewardship</h3>
+          <p class="card-desc">Water is life. We optimize every drop through sub-surface capillary wicking systems that minimize evaporative loss and recycle rainwater runoff.</p>
+        </div>
+
+        <div class="bento-card rv rv-delay-1" style="grid-column: span 4;">
+          <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+          <h3 class="card-title">Community-Led</h3>
+          <p class="card-desc">We never impose external blueprints. Solutions are co-designed with teachers, headmasters, village elders, and youth farmer groups.</p>
+        </div>
+
+        <div class="bento-card rv rv-delay-2" style="grid-column: span 4;">
+          <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3 class="card-title">Regenerative Ecology</h3>
+          <p class="card-desc">Zero chemical runoff. We enrich living soils with biochar, compost teas, natural pest deterrents, and indigenous crop varieties.</p>
+        </div>
+
+        <div class="bento-card rv" style="grid-column: span 4;">
+          <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3 class="card-title">Youth Empowerment</h3>
+          <p class="card-desc">Transforming agriculture from an onerous chore into an exciting, tech-enabled enterprise that dignifies and inspires the next generation.</p>
+        </div>
+
+        <div class="bento-card rv rv-delay-1" style="grid-column: span 4;">
+          <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3 class="card-title">Radical Integrity</h3>
+          <p class="card-desc">Transparent financial reporting, open-source educational manuals, and faithful accountability to donors, volunteers, and communities.</p>
+        </div>
+
+        <div class="bento-card rv rv-delay-2" style="grid-column: span 4;">
+          <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3 class="card-title">Frugal Innovation</h3>
+          <p class="card-desc">Building resilient agricultural systems from locally accessible, affordable, and durable recycled materials that anyone can maintain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Growth Timeline -->
+  <section class="section" id="timeline">
+    <div class="wrap">
+      <div class="text-center rv">
+        <div class="sec-tag">Milestones</div>
+        <h2 class="sec-h2">Our journey of growth & impact</h2>
+        <p class="sec-lead">From small-scale trials in Kisumu to institutional recognition across 6 Kenyan counties.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2022</div>
+          <h3 class="tl-title">Founding & First School Prototype</h3>
+          <p class="tl-desc">RigenFarms is registered in Kisumu, Kenya. We build our first pilot wicking bed at a local primary school, demonstrating 50% water savings and yielding fresh spinach for over 200 pupil meals weekly.</p>
+        </div>
+
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2023</div>
+          <h3 class="tl-title">Scaling to 10 Schools & Community Nurseries</h3>
+          <p class="tl-desc">Expanded across Kisumu and Siaya counties. Established our central tree and vegetable seedling nursery, distributing over 4,000 seedlings and training 600+ youth agripreneurs.</p>
+        </div>
+
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024</div>
+          <h3 class="tl-title">6 Counties, 25 Schools & University Collaborations</h3>
+          <p class="tl-desc">Formalized academic partnerships with Maseno University and Great Lakes University of Kisumu. Reached 2,000+ community members trained and crossed 500 wicking container installations.</p>
+        </div>
+
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025 & Beyond</div>
+          <h3 class="tl-title">Regional Agro-Hub & Circular Innovation</h3>
+          <p class="tl-desc">Expanding climate training hubs, introducing biochar enrichment systems, and scaling school nutrition programs across Western and Rift Valley Kenya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Core Team -->
+  <section class="section section-tint" id="team">
+    <div class="wrap">
+      <div class="text-center rv">
+        <div class="sec-tag">Leadership</div>
+        <h2 class="sec-h2">Passionate growers & field mentors</h2>
+        <p class="sec-lead">The dedicated team on the ground, working hand-in-hand with teachers, pupils, and farmers daily.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card rv">
+          <div class="team-photo-wrap">
+            <img src="images/walter.jpeg" alt="Walter Tito - CEO & Founder" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Walter Tito</h3>
+            <div class="team-role">CEO & Founder</div>
+            <p class="team-quote">"Building a food-secure Kenya starts with bold vision, community trust, and the willingness to get your hands dirty in the soil."</p>
+            <div class="team-loc"><i class="fa-solid fa-location-dot"></i> Kisumu, Kenya</div>
+          </div>
+        </div>
+
+        <div class="team-card rv rv-delay-1">
+          <div class="team-photo-wrap">
+            <img src="images/kahkiti.jpg" alt="Khakiti Mercy - Co-Founder" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Khakiti Mercy</h3>
+            <div class="team-role">Co-Founder</div>
+            <p class="team-quote">"Every garden we establish in a school is a living declaration that our youth can lead their own climate solutions."</p>
+            <div class="team-loc"><i class="fa-solid fa-location-dot"></i> Kisumu, Kenya</div>
+          </div>
+        </div>
+
+        <div class="team-card rv rv-delay-2">
+          <div class="team-photo-wrap">
+            <img src="images/christopher.jpg" alt="Christopher Onyango - Lead Environmental Ecologist" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Christopher Onyango</h3>
+            <div class="team-role">Lead Environmental Ecologist</div>
+            <p class="team-quote">"Healthy ecosystems and thriving human communities are inseparable — nurture the soil and you nurture the future."</p>
+            <div class="team-loc"><i class="fa-solid fa-location-dot"></i> Kisumu, Kenya</div>
+          </div>
+        </div>
+
+        <div class="team-card rv rv-delay-3">
+          <div class="team-photo-wrap">
+            <img src="images/ken.jpeg" alt="Kennedy Shitawa - Finance & Operations" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Kennedy Shitawa</h3>
+            <div class="team-role">Finance & Operations</div>
+            <p class="team-quote">"Lasting social impact grows from transparent operational systems and faithful stewardship of every single coin."</p>
+            <div class="team-loc"><i class="fa-solid fa-location-dot"></i> Kisumu, Kenya</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional Partners -->
+  <section class="section" id="partners">
+    <div class="wrap text-center rv">
+      <div class="sec-tag">Collaborators</div>
+      <h2 class="sec-h2">Trusted by leading institutions</h2>
+      <p class="sec-lead">We work alongside research universities, civil society coalitions, and international foundations to scale verified agricultural practices.</p>
+
+      <div class="partner-logos-row">
+        <img src="partner-logos/maseno-university.svg" alt="Maseno University" title="Maseno University" />
+        <img src="partner-logos/great-lakes-university.png" alt="Great Lakes University of Kisumu" title="Great Lakes University of Kisumu" />
+        <img src="partner-logos/konrad-adenauer.png" alt="Konrad-Adenauer-Stiftung" title="Konrad-Adenauer-Stiftung" />
+        <img src="partner-logos/ti-kenya.png" alt="Transparency International Kenya" title="Transparency International Kenya" />
+        <img src="partner-logos/eacc.png" alt="Ethics and Anti-Corruption Commission" title="Ethics and Anti-Corruption Commission" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section section-dark" style="position: relative; overflow: hidden; text-align: center;">
+    <div class="wrap rv" style="max-width: 760px;">
+      <div class="sec-tag">Take Action</div>
+      <h2 class="sec-h2" style="font-size: clamp(2.2rem, 4.5vw, 3.8rem);">Join us in planting seeds of lasting change.</h2>
+      <p class="sec-lead" style="margin: 20px auto 36px;">Whether you want to sponsor a school wicking garden, volunteer your agronomy skills, or partner on research, we welcome you.</p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="donation.html">
+          <i class="fa-solid fa-leaf"></i> Support a Garden
+        </a>
+        <a class="btn btn-ghost-white" href="volunteers.html">
+          Volunteer With Us
+        </a>
+        <a class="btn btn-ghost-white" href="contactus.html">
+          Contact Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Universal Footer -->
+  <footer id="footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">
+            <img src="images/logo.png" alt="" width="44" height="44" />
+            <div>
+              <strong>RigenFarms</strong>
+              <small>Kisumu · Kenya · Reg. 2022</small>
+            </div>
+          </div>
+          <p class="foot-desc">Empowering Kenyan schools, youth, and communities through climate-smart wicking container gardening, food security programs, and sustainable agriculture training.</p>
+          <div class="foot-soc">
+            <a href="https://www.linkedin.com/company/rigenfarms/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/254706476939" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:rigenfarms@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h4>Navigation</h4>
+          <ul class="foot-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="projects.html">Programs</a></li>
+            <li><a href="impact.html">Impact Stories</a></li>
+            <li><a href="photos.html">Field Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>Get Involved</h4>
+          <ul class="foot-links">
+            <li><a href="volunteers.html">Volunteer</a></li>
+            <li><a href="volunteersForm.html">Application Form</a></li>
+            <li><a href="donation.html">Donate</a></li>
+            <li><a href="annual-reports.html">Annual Reports</a></li>
+            <li><a href="memoranda.html">Guides & MoUs</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>Stay Connected</h4>
+          <div class="foot-contact-list">
+            <span><i class="fa-solid fa-location-dot"></i> Kisumu, Kenya</span>
+            <a href="tel:+254706476939"><i class="fa-solid fa-phone"></i> +254 706 476 939</a>
+            <a href="mailto:rigenfarms@gmail.com"><i class="fa-solid fa-envelope"></i> rigenfarms@gmail.com</a>
+          </div>
+          <form class="newsf" aria-label="Subscribe to newsletter">
+            <input type="email" placeholder="Your email address" required aria-label="Email address" />
+            <button type="submit" aria-label="Submit newsletter subscription"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <div>&copy; <span id="yr">2026</span> RigenFarms. All rights reserved. Registered Non-Profit Initiative in Kenya.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contactus.html">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="rigen-theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+This version keeps the site's look and functionality intact.
+Only these features were added:
+- annual-reports.html
+- memoranda.html
+- footer/resource links to the new pages
+- a small resources section on the homepage
+- documents/README.txt

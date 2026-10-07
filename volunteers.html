@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Volunteer With Us — RigenFarms Kenya</title>
+  <meta name="description" content="Join RigenFarms as a volunteer. Help build school wicking gardens, mentor youth agripreneurs, and advance climate-smart agriculture across Kenya." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Inter:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="rigen-theme.css" />
+
+  <style>
+    .page-hero::before {
+      background-image: url('images/men.jpeg');
+    }
+
+    /* Roles Grid */
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .role-card {
+      background: var(--w);
+      border: 1px solid var(--li);
+      border-radius: var(--rad-lg);
+      padding: 36px 30px;
+      box-shadow: var(--sh-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .role-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sh);
+    }
+    .role-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--rad);
+      background: var(--g8);
+      color: var(--g3);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+    .role-title {
+      font-family: var(--ff-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .role-desc {
+      color: var(--sub);
+      font-size: 0.94rem;
+      line-height: 1.7;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+    .role-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--ink);
+      font-weight: 600;
+      margin-bottom: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--li);
+    }
+    .role-points li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .role-points i {
+      color: var(--g4);
+    }
+
+    /* Steps Bar */
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .step-box {
+      background: var(--s0);
+      border: 1px solid var(--s2);
+      border-radius: var(--rad);
+      padding: 28px 24px;
+      position: relative;
+    }
+    .step-num {
+      font-family: var(--ff-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--a2);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .step-title {
+      font-family: var(--ff-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .step-desc {
+      font-size: 0.88rem;
+      color: var(--sub);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header id="header">
+    <a class="nav-logo" href="index.html" aria-label="RigenFarms — Home">
+      <img src="images/logo.png" alt="RigenFarms Logo" width="40" height="40" />
+      <div class="logo-text">
+        <span class="logo-name">RigenFarms</span>
+        <span class="logo-sub">Kisumu · Kenya</span>
+      </div>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li class="has-drop">
+          <a href="aboutus.html">About</a>
+          <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Toggle About submenu">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="drop-menu">
+            <a href="aboutus.html">Our Story & Mission</a>
+            <a href="aboutus.html#team">Leadership & Team</a>
+            <a href="aboutus.html#values">Core Principles</a>
+            <a href="impact.html">Impact Metrics</a>
+          </div>
+        </li>
+        <li class="has-drop">
+          <a href="projects.html">Programs</a>
+          <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Programs submenu">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="drop-menu">
+            <a href="projects.html">All Field Programs</a>
+            <a href="projects.html#wicking">Wicking Beds</a>
+            <a href="projects.html#schools">School Gardens</a>
+            <a href="memoranda.html">Guides & MoUs</a>
+          </div>
+        </li>
+        <li><a href="photos.html">Gallery</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="volunteers.html" class="active">Get Involved</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="nav-cta" href="donation.html">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i> Donate
+      </a>
+      <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <nav class="mob-menu" id="mobMenu" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Programs</a>
+    <a href="impact.html">Impact</a>
+    <a href="photos.html">Field Gallery</a>
+    <a href="volunteers.html" class="active">Volunteer</a>
+    <a href="annual-reports.html">Reports</a>
+    <a href="contactus.html">Contact</a>
+    <div style="margin-top: 28px;">
+      <a class="btn btn-primary" href="donation.html" style="width: 100%;">
+        <i class="fa-solid fa-leaf"></i> Donate Now
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero" aria-labelledby="volH1">
+    <div class="wrap">
+      <div class="page-hero-inner rv">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Volunteer</span>
+        </div>
+        <div class="sec-tag">Join The Movement</div>
+        <h1 id="volH1">Get your hands in the soil & <em>grow change</em>.</h1>
+        <p>Whether you are an agronomist, student, educator, or creative storyteller, your energy helps us transform school compounds and community food security across Kenya.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Volunteer Roles -->
+  <section class="section" id="roles">
+    <div class="wrap">
+      <div class="text-center rv">
+        <div class="sec-tag">Opportunities</div>
+        <h2 class="sec-h2">Volunteer Pathways</h2>
+        <p class="sec-lead">Select the track where your passion and skills make the deepest community impact.</p>
+      </div>
+
+      <div class="roles-grid">
+        <!-- Track 1 -->
+        <article class="role-card rv">
+          <div>
+            <div class="role-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3 class="role-title">Hands-On Garden Builder</h3>
+            <p class="role-desc">Work on the ground in Kisumu and Siaya constructing wicking bed containers, mixing living biochar soil, and laying out school garden plots.</p>
+            <ul class="role-points">
+              <li><i class="fa-solid fa-circle-check"></i> Wicking bed carpentry & plumbing</li>
+              <li><i class="fa-solid fa-circle-check"></i> Soil preparation & transplanting</li>
+              <li><i class="fa-solid fa-circle-check"></i> Commitment: 4–8 hrs/week (Flexible)</li>
+            </ul>
+          </div>
+          <a class="btn btn-forest" href="volunteersForm.html?track=garden" style="width: 100%;">
+            Apply for this Track <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Track 2 -->
+        <article class="role-card rv rv-delay-1">
+          <div>
+            <div class="role-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="role-title">School Garden Mentor</h3>
+            <p class="role-desc">Facilitate hands-on science and biology sessions with primary school learners, teaching them wicking water cycles and organic composting.</p>
+            <ul class="role-points">
+              <li><i class="fa-solid fa-circle-check"></i> Student club facilitation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Living lab lesson support</li>
+              <li><i class="fa-solid fa-circle-check"></i> Commitment: 1–2 school visits/week</li>
+            </ul>
+          </div>
+          <a class="btn btn-forest" href="volunteersForm.html?track=mentor" style="width: 100%;">
+            Apply for this Track <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Track 3 -->
+        <article class="role-card rv rv-delay-2">
+          <div>
+            <div class="role-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3 class="role-title">Agronomy & Soil Specialist</h3>
+            <p class="role-desc">Provide technical guidance on natural pest prevention, bio-fertilizer teas, seed saving, and yield optimization across our 500+ container network.</p>
+            <ul class="role-points">
+              <li><i class="fa-solid fa-circle-check"></i> Organic pest control protocols</li>
+              <li><i class="fa-solid fa-circle-check"></i> Seedling nursery propagation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Commitment: Flexible / Project-based</li>
+            </ul>
+          </div>
+          <a class="btn btn-forest" href="volunteersForm.html?track=agronomy" style="width: 100%;">
+            Apply for this Track <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Track 4 -->
+        <article class="role-card rv">
+          <div>
+            <div class="role-icon"><i class="fa-solid fa-camera"></i></div>
+            <h3 class="role-title">Media & Community Storyteller</h3>
+            <p class="role-desc">Capture authentic photography, record farmer testimonials, and create engaging social updates that amplify grassroots climate resilience.</p>
+            <ul class="role-points">
+              <li><i class="fa-solid fa-circle-check"></i> Field photography & video capture</li>
+              <li><i class="fa-solid fa-circle-check"></i> Social media & newsletter writing</li>
+              <li><i class="fa-solid fa-circle-check"></i> Commitment: Remote or Field</li>
+            </ul>
+          </div>
+          <a class="btn btn-forest" href="volunteersForm.html?track=media" style="width: 100%;">
+            Apply for this Track <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Track 5 -->
+        <article class="role-card rv rv-delay-1">
+          <div>
+            <div class="role-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3 class="role-title">Youth Agripreneur Coach</h3>
+            <p class="role-desc">Coach young rural entrepreneurs on bookkeeping, local produce marketing, customer management, and micro-business viability.</p>
+            <ul class="role-points">
+              <li><i class="fa-solid fa-circle-check"></i> Business plan mentorship</li>
+              <li><i class="fa-solid fa-circle-check"></i> Market linkage connections</li>
+              <li><i class="fa-solid fa-circle-check"></i> Commitment: 2–4 hrs/month</li>
+            </ul>
+          </div>
+          <a class="btn btn-forest" href="volunteersForm.html?track=business" style="width: 100%;">
+            Apply for this Track <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Track 6 -->
+        <article class="role-card rv rv-delay-2" style="background: var(--g0); color: var(--w); border-color: var(--a3);">
+          <div>
+            <div class="role-icon" style="background: rgba(224,122,32,0.18); color: var(--a3);"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3 class="role-title" style="color: var(--w);">Custom Contribution</h3>
+            <p class="role-desc" style="color: rgba(255,255,255,0.72);">Have a unique skill not listed here? (e.g. web engineering, grant writing, legal advisory, logistical support). We would love to plug you in.</p>
+            <ul class="role-points" style="border-color: rgba(255,255,255,0.15); color: var(--w);">
+              <li><i class="fa-solid fa-circle-check" style="color: var(--a3);"></i> Specialized professional advisory</li>
+              <li><i class="fa-solid fa-circle-check" style="color: var(--a3);"></i> Strategic institutional linkages</li>
+              <li><i class="fa-solid fa-circle-check" style="color: var(--a3);"></i> Tailored to your availability</li>
+            </ul>
+          </div>
+          <a class="btn btn-primary" href="volunteersForm.html?track=custom" style="width: 100%;">
+            Introduce Yourself <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Steps -->
+  <section class="section section-tint" id="process">
+    <div class="wrap">
+      <div class="text-center rv">
+        <div class="sec-tag">Onboarding</div>
+        <h2 class="sec-h2">How to get started</h2>
+        <p class="sec-lead">Four simple steps from application to your first day in the garden.</p>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-box rv">
+          <div class="step-num">01</div>
+          <h4 class="step-title">Submit Form</h4>
+          <p class="step-desc">Fill out our brief online application detailing your interests, availability, and location.</p>
+        </div>
+        <div class="step-box rv rv-delay-1">
+          <div class="step-num">02</div>
+          <h4 class="step-title">Welcome Chat</h4>
+          <p class="step-desc">A 15-minute phone or WhatsApp alignment call with our volunteer coordinator.</p>
+        </div>
+        <div class="step-box rv rv-delay-2">
+          <div class="step-num">03</div>
+          <h4 class="step-title">Field Orientation</h4>
+          <p class="step-desc">Hands-on briefing on wicking technology and community safeguarding principles.</p>
+        </div>
+        <div class="step-box rv rv-delay-3">
+          <div class="step-num">04</div>
+          <h4 class="step-title">Start Growing</h4>
+          <p class="step-desc">Pair up with a field team and begin making a tangible difference with pupils and farmers.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a class="btn btn-primary" href="volunteersForm.html" style="font-size: 1.05rem; padding: 15px 36px;">
+          <i class="fa-solid fa-pen-to-square"></i> Open Volunteer Application Form
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Universal Footer -->
+  <footer id="footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">
+            <img src="images/logo.png" alt="" width="44" height="44" />
+            <div>
+              <strong>RigenFarms</strong>
+              <small>Kisumu · Kenya · Reg. 2022</small>
+            </div>
+          </div>
+          <p class="foot-desc">Empowering Kenyan schools, youth, and communities through climate-smart wicking container gardening, food security programs, and sustainable agriculture training.</p>
+          <div class="foot-soc">
+            <a href="https://www.linkedin.com/company/rigenfarms/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/254706476939" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:rigenfarms@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h4>Navigation</h4>
+          <ul class="foot-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="projects.html">Programs</a></li>
+            <li><a href="impact.html">Impact Stories</a></li>
+            <li><a href="photos.html">Field Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>Get Involved</h4>
+          <ul class="foot-links">
+            <li><a href="volunteers.html">Volunteer</a></li>
+            <li><a href="volunteersForm.html">Application Form</a></li>
+            <li><a href="donation.html">Donate</a></li>
+            <li><a href="annual-reports.html">Annual Reports</a></li>
+            <li><a href="memoranda.html">Guides & MoUs</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>Stay Connected</h4>
+          <div class="foot-contact-list">
+            <span><i class="fa-solid fa-location-dot"></i> Kisumu, Kenya</span>
+            <a href="tel:+254706476939"><i class="fa-solid fa-phone"></i> +254 706 476 939</a>
+            <a href="mailto:rigenfarms@gmail.com"><i class="fa-solid fa-envelope"></i> rigenfarms@gmail.com</a>
+          </div>
+          <form class="newsf" aria-label="Subscribe to newsletter">
+            <input type="email" placeholder="Your email address" required aria-label="Email address" />
+            <button type="submit" aria-label="Submit newsletter subscription"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <div>&copy; <span id="yr">2026</span> RigenFarms. All rights reserved. Registered Non-Profit Initiative in Kenya.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contactus.html">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="rigen-theme.js"></script>
+</body>
+</html>
